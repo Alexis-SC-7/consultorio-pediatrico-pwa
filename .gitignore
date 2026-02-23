@@ -1,0 +1,38 @@
+# ==============================================================================
+# ARCHIVO DE EXCLUSIÓN - CONSULTORIO DIGITAL
+# ==============================================================================
+
+# DEPENDENCIAS
+# node_modules: archivos instalados localmente
+node_modules/
+.pnp
+.pnp.js
+
+# ENTREGABLES
+dist/
+dist-ssr/
+build/
+
+# SEGURIDAD
+# Estos archivos guardan llaves de API y contraseñas
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# RASTROS DE FIREBASE
+.firebase/
+firebase-debug.log*
+ui-debug.log*
+
+# CONFIGURACIÓN DEL ENTORNO / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Normalización del Layout Principal.
+ * Aseguramos que la aplicación consuma el 100% del espacio disponible
+ * y aplicamos ese gris clínico de fondo que unifica toda la interfaz.
+ */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: #f3f4f6; /* Gris neutro profesional */
+  /* Optimizamos el renderizado de fuentes para que se vean más nítidas */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Refinamiento de Scroll y Tipografía.
+ * Pequeños detalles que hacen que el sistema se sienta "nativo".
+ */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-y: overlay; /* Evita que el contenido salte cuando aparece el scroll */
+}
+
+/* Personalización sutil de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db; /* Gris suave que no distrae */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af; /* Oscurece un poco al interactuar */
+}
+
+/**
+ * Animaciones globales.
+ * Estas clases las usamos en los componentes para que las transiciones 
+ * de página no sean bruscas.
+ */
+.animate-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
